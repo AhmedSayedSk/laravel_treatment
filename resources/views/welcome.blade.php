@@ -445,7 +445,7 @@
 
 <!--clinic-->
 <section class="pharmacy py-4" id="pharmacy">
-    <h1 class="heading"><span>Your </span>drug</h1>
+    <h1 class="heading"><span>اطلب دوائك </span>الان</h1>
 
     @if ($errors->any() && old('save_drug_book'))
         <div class="alert alert-danger validation-error">
