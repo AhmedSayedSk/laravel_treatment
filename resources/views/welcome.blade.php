@@ -476,12 +476,13 @@
             </div>
             <div class="form-group col-md-3 mb-3">
                 <label for="doctor_id">اختر الدواء</label>
-                <select class="form-control" id="drug_id" value="{{ old('drug_id') }}" name="drug_id">
+                <textarea rows="4" class="form-control" id="drug" value="{{ old('drug') }}" name="drug"></textarea>
+                {{-- <select class="form-control" id="drug_id" value="{{ old('drug_id') }}" name="drug_id">
                     <option value="">اختر الدواء</option>
                     @foreach(\App\Models\Drug::all() as $drug)
                         <option value="{{$drug->id}}">{{$drug->name}}</option>
                     @endforeach
-                </select>
+                </select> --}}
             </div>
             <div class="form-group col-mb-3 mb-3">
                 <button type="submit" class="btn btn-primary">اطلب الآن الدواء</button>

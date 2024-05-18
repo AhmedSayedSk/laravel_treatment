@@ -31,7 +31,7 @@ class HomeController extends Controller
             "patient_name"=>"required",
             "patient_mobile"=>"required",
             "patient_email"=>"required|email",
-            "drug_id"=>"required",
+            "drug"=>"required",
         ]);
 
         $book = DrugBook::create($data);
