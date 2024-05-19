@@ -100,6 +100,7 @@
                             <div class="form-group">
                                 <label for="specialty">Specialty (التخصص)</label>
                                 <select class="form-control select2" id="specialty_id" name="specialty_id">
+                                    <option value="0">None</option>
                                     @foreach(\App\Models\Specialty::all() as $sp)
                                         <option {{ ($sp->id == $dataTypeContent->specialty_id ? 'selected' : '') }} value="{{$sp->id}}">{{$sp->name}}</option>
                                     @endforeach
