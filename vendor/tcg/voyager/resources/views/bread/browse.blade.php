@@ -36,6 +36,15 @@
     </div>
 @stop
 
+@php
+    // View specific booking for specific doctor
+    $role = Auth::user()->role->name;
+    if($dataType->display_name_singular == "Book" && $role == "doctor") {
+        $doctor_id = Auth::user()->id;
+        $dataTypeContent = $dataTypeContent->where('doctor_id', $doctor_id);
+    }
+@endphp
+
 @section('content')
     <div class="page-content browse container-fluid">
         @include('voyager::alerts')
